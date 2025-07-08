@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Branding",
+    "description": "Crafting user-centered designs that blend creativity with functionality. I specialize in creating intuitive, visually appealing interfaces that enhance user experience and reflect brand identity across both web and mobile platforms."
+  },
+  {
+    "id": 2,
+    "title": "3D Design",
+    "description": "Bringing ideas to life with immersive 3D models and visualizations. From concept to creation, I specialize in crafting realistic, high-quality 3D assets for product visualization, animation, and interactive experiences, pushing the boundaries of digital creativity."
+  },
+  {
+    "id": 3,
+    "title": "Web Development",
+    "description": "Transforming designs into fully functional, high-performing websites and apps. My expertise lies in building responsive, scalable, and secure digital experiences using the latest web technologies to ensure seamless performance across devices."
+  }
+]

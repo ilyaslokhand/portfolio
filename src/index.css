@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap");
+
+body {
+  background-color: #000;
+}
+
+.instrument-font {
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.inherit {
+  border-radius: 12px;
+}
+
+.border {
+  border-color: #1d1d1d;
+}
+
+.font-size {
+  font-size: 16px;
+}
+
+.secondary-gray {
+  color: #999;
+}
+
+.background-secondary {
+  background-color: #0a0a0a;
+}
+
+.instrument-font {
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(
+    180deg,
+    var(--token-f3149a69-d923-4580-9ac3-74df11d04ca5, #0a0a0a) 0%,
+    rgb(5, 5, 5) 100%
+  );
+}
+
+
+/* Responsive layout styles */
+@media (max-width: 1394px) {
+  .layout-break {
+    flex-direction: column;
+    align-items: center;
+  }
+  .experience-card {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1rem;
+    flex: 1;
+  }
+  .content-container {
+    width: 100%;
+  }
+  .full-width-item {
+    width: 100%;
+  }
+  .bio-contact-row {
+    width: 100%;
+  }
+  .bio-box,
+  .contact-box {
+    flex: 1;
+  }
+}

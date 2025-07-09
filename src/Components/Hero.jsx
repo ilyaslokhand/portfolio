@@ -2,6 +2,7 @@ import React from "react";
 import demo from "../Images/demo.avif";
 import arrow from "../Images/arrow.svg";
 import Experience from "../Json/Experience.json";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -12,26 +13,45 @@ const Hero = () => {
           {/* Top Row */}
           <div className="flex flex-col md:flex-row gap-4 full-width-item">
             {/* Sam Creates Box */}
-            <div className="w-full md:w-[490px] h-[300px] contact-box md:h-[375px] border border-[1px] flex items-end px-[20px] md:px-[30px] pt-[20px] md:pt-[30px] pb-[30px] md:pb-[40px] bg-[linear-gradient(180deg,_#000,_#050505)] rounded-xl">
+            <motion.div
+              className="w-full md:w-[490px] h-[300px] contact-box md:h-[375px] border border-[1px] flex items-end px-[20px] md:px-[30px] pt-[20px] md:pt-[30px] pb-[30px] md:pb-[40px] bg-[linear-gradient(180deg,_#000,_#050505)] rounded-xl"
+              initial={{ x: -50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1.0] }}
+            >
               <p className="text-[#fff7ff] font-bold text-6xl md:text-8xl uppercase instrument-font tracking-[-2px] leading-[0.85]">
                 Sam <br /> Creates
               </p>
-            </div>
+            </motion.div>
 
             {/* Image Box */}
-            <div className="w-full md:w-[288px] h-[250px] md:h-[375px] rounded-xl overflow-hidden">
+            <motion.div
+              className="w-full md:w-[288px] h-[250px] md:h-[375px] rounded-xl overflow-hidden"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1.0] }}
+            >
               <img
                 src={demo}
                 alt="Profile"
                 className="w-full h-full object-cover object-center rounded-inherit"
               />
-            </div>
+            </motion.div>
           </div>
 
           {/* Bottom Row */}
           <div className="flex flex-col md:flex-row gap-4 bio-contact-row full-width-item">
             {/* Bio Box */}
-            <div className="bio-box w-full md:w-[389px] h-auto md:h-[281px] text-[#ffffff] px-[20px] md:px-[30px] pt-[20px] md:pt-[30px] pb-[30px] md:pb-[40px] flex items-center border border-solid rounded-xl bg-[#121212]">
+            <motion.div
+              className="bio-box w-full md:w-[389px] h-auto md:h-[281px] text-[#ffffff] px-[20px] md:px-[30px] pt-[20px] md:pt-[30px] pb-[30px] md:pb-[40px] flex items-center border border-solid rounded-xl bg-[#121212]"
+              initial={{ x: -50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 0.4,
+                ease: [0.25, 0.1, 0.25, 1.0],
+                delay: 0.1,
+              }}
+            >
               <p className="text-xs sm:text-sm inter-font">
                 I'm Samkeet Mehta, a 3D artist, AR creator, and graphic designer
                 with a background in computer engineering. I specialize in brand
@@ -43,10 +63,19 @@ const Hero = () => {
                 digital experiences that push the boundaries of design and
                 storytelling.
               </p>
-            </div>
+            </motion.div>
 
             {/* Contact Box */}
-            <div className="contact-box w-full md:w-[390px] h-auto md:h-[281px] bg-[#1a1a1a] px-[20px] md:px-[30px] pt-[20px] md:pt-[30px] pb-[30px] md:pb-[40px] flex flex-col justify-between rounded-xl">
+            <motion.div
+              className="contact-box w-full md:w-[390px] h-auto md:h-[281px] bg-[#1a1a1a] px-[20px] md:px-[30px] pt-[20px] md:pt-[30px] pb-[30px] md:pb-[40px] flex flex-col justify-between rounded-xl"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{
+                duration: 0.4,
+                ease: [0.25, 0.1, 0.25, 1.0],
+                delay: 0.15,
+              }}
+            >
               <div className="flex justify-between items-start">
                 <p className="text-[14px] md:text-[16px] font-medium text-[#cccccc] inter-font">
                   Wanna Get
@@ -63,12 +92,21 @@ const Hero = () => {
                   Email Me
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Right Column - Experience */}
-        <div className="experience-card  w-full lg:w-[389px] h-auto lg:h-[673px] border rounded-xl bg-[#121212] mt-4 lg:mt-0">
+        <motion.div
+          className="experience-card w-full lg:w-[389px] h-auto lg:h-[673px] border rounded-xl bg-[#121212] mt-4 lg:mt-0"
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            duration: 0.4,
+            ease: [0.25, 0.1, 0.25, 1.0],
+            delay: 0.2,
+          }}
+        >
           <div className="px-[20px] md:px-[30px] pt-[20px] md:pt-[30px] h-full flex flex-col">
             <h2 className="text-[#fff7ff] font-bold text-3xl md:text-4xl uppercase mb-2">
               EXPERIENCE
@@ -105,7 +143,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

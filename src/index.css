@@ -45,6 +45,59 @@ body {
   );
 }
 
+.custom-input {
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.custom-input:focus {
+  border: 1px solid #0099ff;
+}
+
+/* Social Media Hover Effects */
+a:has(img[alt="Facebook"]):hover {
+  background-color: #1877f2 !important;
+}
+
+a:has(img[alt="LinkedIn"]):hover {
+  background-color: #0077b5 !important;
+}
+
+a:has(img[alt="Instagram"]):hover {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  ) !important;
+}
+
+a:has(img[alt="X"]):hover {
+  background-color: #000 !important;
+  border-color: #333 !important;
+}
+
+/* html, body {
+  overflow-x: hidden;
+} */
+
+/* Custom breakpoint for exactly 1266px */
+@media (min-width: 1266px) {
+  .stack-at-1266 {
+    flex-direction: column;
+  }
+
+  .full-width-at-1266 {
+    width: 100%;
+  }
+
+  .margin-at-1266 {
+    margin-bottom: 1rem;
+  }
+}
 
 /* Responsive layout styles */
 @media (max-width: 1394px) {
@@ -70,5 +123,18 @@ body {
   .bio-box,
   .contact-box {
     flex: 1;
+  }
+}
+
+/* Microsoft Surface Duo specific styles */
+@media (min-width: 540px) and (max-width: 720px) {
+  section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .content-container {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
